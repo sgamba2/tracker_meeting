@@ -88,7 +88,7 @@
 \title[VST]{
   {
 %  \vspace{-1.0 in}
-    {Tracker Meeting: simulation of the first station calibration in a vertical position} }
+    {Tracker Meeting: simulation of the first station calibration in a vertical orientation} }
 }
 
 
@@ -239,19 +239,40 @@
 \includegraphics[height=1cm]{figures/png/mu2e_logo_oval.png}
 \titlepage
 \centering
-\includegraphics[height=0.9cm]{figures/png/FNAL-Logo-NAL-Blue.png}\hspace{10mm}\includegraphics[height=1.6cm]{figures/pdf/cherubino.png}
+\includegraphics[height=0.9cm]{figures/png/FNAL-Logo-NAL-Blue.png}\hspace{10mm}\includegraphics[height=1.6cm]{figures/pdf/cherubino.pdf}
 
 \end{frame}
-
+\begin{frame}{Introduction}
+  \begin{itemize}
+  \item Reading out from the first station is expected soon;
+  \item We need to calibrate the standalone station with cosmics.
+  \end{itemize}
+  \vspace{1.5mm}
+ Timing calibration:
+  \begin{itemize}
+    \item drift velocity: $\Delta t$ versus longitudinal position;
+    \item channel to channel delays.
+  \end{itemize}
+  \vspace{1.5mm}
+  What is it needed for this purpose?
+  \begin{itemize}
+    \item unbiased reconstruction of the longitudinal position in a straw.
+  \end{itemize}
+  \vspace{1.5mm}
+  During CM, there was a discussion related to the orientation of the station:
+  \begin{itemize}
+    \item Vertical orientation is preferred for electronics and cooling system and because the station will be vertical during the experiment;
+  \item Horizontal orientation was chosen for the first calibration of a plane and enables an unbiased reconstruction.
+\end{itemize}
+\vspace{1.5mm}
+  A simulation has been performed to reconstruct cosmics tracks with vertically oriented station,
+  aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
+\end{frame}
 \begin{frame}{Cosmics simulation and selection criteria}
   \begin{itemize}
-    \item 
-    A simulation has been performed to reconstruct cosmics for the calibration of the station, which is vertically oriented, 
-    aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel;
+    \item Simulated cosmics crossing only one station;
     \vspace{3mm}
-    \item Selection of the first station;
-    \vspace{3mm}
-    \item Vertical and extracted position;
+    \item Station in vertical orientation in extracted position;
     \vspace{3mm}
     \item No magnetic field;
     \vspace{3mm}
@@ -261,12 +282,17 @@
   \end{itemize}
 \end{frame}
 \begin{frame}{Panel illumination}
-   
+   \vspace{-3mm}
             \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.8 \textwidth]{figures/pdf/xp_vs_yp_panel0.png}
                 \label{fig:enter-label}
             \end{figure}
+\begin{itemize}
+  \item illumination pattern of a panel in a vertical orientation (panel frame);
+  \item the longest wires have no hits in the center;
+  \item these will be difficult to calibrate (noise).
+\end{itemize}
 
 \end{frame}
 
@@ -324,7 +350,7 @@
     $$\textbf{\text{2. Geometrical Stereo Hits}}$$
     Determination of the hit point in a plane:
     \begin{itemize}
-      \item intersection point $(x,y)$ using the two straws directions and midpoints;
+      \item intersection point $(x,y)$ using the two straws directions and midpoints from two panels;
       \item mean of $z$ coordinate between the two faces.
     \end{itemize}
   \end{column}
@@ -340,7 +366,7 @@ Determination of a unique reconstructed track:
 
   \end{frame}
 
-\begin{frame}{Results}
+\begin{frame}{Results: longitudinal position reconstruction}
   \vspace{-3mm}
   \begin{columns}
     \begin{column}{0.5\framewidth}
@@ -350,54 +376,106 @@ Determination of a unique reconstructed track:
         \label{fig:enter-label}
     \end{figure}
     \vspace{-12mm}
-
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias_vs_x.png}
-        \label{fig:enter-label}
-    \end{figure}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=  \textwidth]{figures/pdf/panel_00_x_bias.png}
+      \label{fig:enter-label}
+  \end{figure}
+     
     \end{column}
     \begin{column}{0.5\framewidth}
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width=  \textwidth]{figures/pdf/panel_00_x_bias.png}
-        \label{fig:enter-label}
-    \end{figure}
-    \vspace{-12mm}
-
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias_vs_x_prof.png}
-        \label{fig:enter-label}
-    \end{figure}
+      \begin{itemize}
+        \item all histograms show longitudinal position in the panel frame;
+        \vspace{3mm}
+      \item reconstructed longitudinal position distribution presents peaks in the overlaps with other panels (four spots as in previous slides);
+        \vspace{3mm}
+      \item $\Delta x = x_{rec}-x_{true}$;
+      \vspace{3mm}
+        \item the longitudinal position bias range is about -6$\div$6 cm.
+      \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
 
-\begin{frame}{Results}
+
+\begin{frame}{Results: systematics on longitudinal position reconstruction}
   \vspace{-3mm}
   \begin{columns}
     \begin{column}{0.5\framewidth}
       \begin{figure}[H]
         \centering
-        \includegraphics[width= \textwidth]{figures/pdf/myz_vs_myz_rec.png}
+        \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias_vs_x.png}
         \label{fig:enter-label}
     \end{figure}
-    
+    \vspace{-12mm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias_vs_x_prof.png}
+      \label{fig:enter-label}
+  \end{figure}
     \end{column}
     \begin{column}{0.5\framewidth}
-     
+      \begin{itemize}
+        \item 2D distribution of $\Delta x$ versus $x_{true}$ shows four different spots referring to the overlap regions;
+        \vspace{3mm}
+        \item the first spot (CAL side) is referred to ninety degrees panels overlap;
+        \vspace{3mm}
+        \item  profile of the $\Delta x$ versus $x_{true}$ shows a systematic effect in determining the longitudinal position of a range greater than -4$\div$4 cm.
+
+      \end{itemize}
+
+    
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+\begin{frame}{Results: systematics on track direction reconstruction}
+  \vspace{-3mm}
+  \begin{columns}
+    \begin{column}{0.5\framewidth}
       \begin{figure}[H]
         \centering
         \includegraphics[width= \textwidth]{figures/pdf/myz_vs_myz_rec_prof.png}
         \label{fig:enter-label}
     \end{figure}
+     
+    \vspace{-12mm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width= \textwidth]{figures/pdf/myx_vs_myx_rec_prof.png}
+      \label{fig:enter-label}
+  \end{figure}
+    \end{column}
+    \begin{column}{0.5\framewidth}
+      \vspace{-4mm}
+
+      \begin{itemize}
+        \item $m_{yz}=\frac{\Delta y}{\Delta z}$ and $m_{yx}=\frac{\Delta y}{\Delta x}$;
+        \vspace{2mm}
+        \item first histogram shows the mean of reconstructed $m_{yz}$ versus the true one and it shows a systematic effect in determining the $zy$ track direction (-4$\div$3);
+        \vspace{2mm}
+        \item second histogram shows the mean of reconstructed $m_{yx}$ versus the true one and it shows a systematic effect in determining the $xy$ track direction (-1$\div$1);
+        \vspace{2mm}
+        \item true hits far away from the straws midpoint lead to the misreconstructed $zy$ and $xy$ direction lines.
+      \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 \begin{frame}{Conclusions}
- 
+  In a vertical configuration of the station:
+  \vspace{4mm}
+  \begin{itemize}
+    \item as shown in the panel illumination plot, long wires will not be correctly calibrated due to the fact that only the extreme parts (noisy) of the straw are hit;
+    \vspace{2mm}
+    \item there will be systematic effects in determining the longitudinal position of a range greater than -4$\div$4 cm;
+    \vspace{2mm}
+    \item there will be systematic effects in determining tracks $xy$ and $zy$ directions.
+  \end{itemize}
+  \vspace{4mm}
+  At the end, we won't be able to perform a good timing calibration.
 \end{frame}
 \begin{frame}{Backup Slide}
   
@@ -407,6 +485,12 @@ Determination of a unique reconstructed track:
         \label{fig:enter-label}
     \end{figure}
   \end{frame}
+
+
+
+
+
+
   \begin{frame}{Backup Slide}
     \vspace{-3mm}
 
@@ -441,4 +525,6 @@ Determination of a unique reconstructed track:
 \end{column}
 \end{columns}
 \end{frame}
+
+
 \end{document}
