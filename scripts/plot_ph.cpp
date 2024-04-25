@@ -283,7 +283,29 @@ void plot_mxy_all(){
 }
 
 
+void plot_x(){
 
+ TFile *f=TFile::Open("prova.hist");
+
+ TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_00/panel_00_x");
+
+ TCanvas * c1 = new TCanvas("c1","c1");
+ c1->cd(1);
+ h0->Rebin(8);
+
+ h0->Draw("");
+ h0->SetFillColor(4);
+ h0->SetFillStyle(3002);
+ h0->SetBarWidth(0.84);
+ h0->SetBarOffset(0.5);
+ h0->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h0->GetYaxis()->SetTitle("counts");
+
+ h0->SetTitle("Run 1210, plane0, panel0: x, panel frame");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/x_panel0.pdf");
+
+ //h2->Draw("sames");
+}
 
 
 void plot_all(){
@@ -295,6 +317,7 @@ void plot_all(){
   plot_panel_bias_vs_x_prof_0();
   plot_panel_bias_vs_x_prof_all();
   plot_x_bias();
+  plot_x();
   return;
 }
 

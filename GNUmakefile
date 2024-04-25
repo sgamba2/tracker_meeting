@@ -35,6 +35,7 @@ jpg: $(jpgs)
 
 note: $(tex_files) pdf 
 	if [ ! -d tmp ] ; then mkdir tmp ; fi ; \
+	echo BIBINPUTS=$$BIBINPUTS ; \
 	pdflatex -output-directory=tmp $^ ; \
 	cd tmp ; \
 	bibtex $(note) ; \
