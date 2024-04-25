@@ -85,10 +85,10 @@
 % Or whatever. Note that the encoding and the font should match. If T1
 % does not look nice, try deleting the line with the fontenc.
 
-\title[TDAQ \& VST]{
+\title[VST]{
   {
 %  \vspace{-1.0 in}
-    \bf {Tracker Meeting: simulation of the vertical station calibration} }
+    {Tracker Meeting: simulation of the first station calibration in a vertical position} }
 }
 
 
@@ -239,41 +239,106 @@
 \includegraphics[height=1cm]{figures/png/mu2e_logo_oval.png}
 \titlepage
 \centering
-\includegraphics[height=1cm]{figures/png/FNAL-Logo-NAL-Blue.png}\hspace{10mm}\includegraphics[height=1.6cm]{figures/pdf/cherubino.pdf}
+\includegraphics[height=0.9cm]{figures/png/FNAL-Logo-NAL-Blue.png}\hspace{10mm}\includegraphics[height=1.6cm]{figures/pdf/cherubino.pdf}
 
 \end{frame}
 
-
-\begin{frame}{Reconstruction of Cosmic tracks}
-\vspace{-3mm}
-
+\begin{frame}{Cosmics simulation and selection criteria}
+  \begin{itemize}
+    \item A simulation has been performed to reconstruct cosmics for the calibration, to understand possible biases in 
+    the determination of longitudinal position due to the non uniform illumination of a panel;
+    \vspace{3mm}
+    \item Selection of first station;
+    \vspace{3mm}
+    \item Vertical and extracted position;
+    \vspace{3mm}
+    \item No magnetic field;
+    \vspace{3mm}
+    \item To reconstruct a straight line in 3D, at least 4 hits at different $z$ are needed: tracks selected with $nhits_{face_i}\geq 1$;
+    \vspace{3mm}
+    \item To improve the resolution, $nhits_{panel_i}\leq 3$ were selected.
+  \end{itemize}
 \end{frame}
-
-
 \begin{frame}{Panel illumination}
    
-       
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.8 \textwidth]{figures/pdf/xp_vs_yp_panel_0.pdf}
+                \includegraphics[width=0.8 \textwidth]{figures/pdf/xp_vs_yp_panel0.pdf}
                 \label{fig:enter-label}
             \end{figure}
 
 \end{frame}
 
-\iffalse
 
 
 
-global run details: prima instabile 
-abbiamo ancora il firmware vecchio su daq09
-non ancora testato ilsoftware nuobo e accennare il rate ma non e un problema perche possiamo continuare a caratterizzare abbastanza bene l apparato (artdaq non e stato testato a quei rate) e pure slow control
-daq is composed of controlling, monitoring and data flowing
-gains, voltages devono essere controllati
-slide con immagine del tracker board : hardware building that dtc-dtc connection
-event building avverra nel dtc , not for cosmics
-to be done: implementare lo slow control dei lowhigh voltage
+\begin{frame}{Reconstruction of Cosmic tracks}
+  \begin{columns}
+    \begin{column}{0.5 \framewidth}
+      \begin{itemize}
+  \item The station is not yet calibrated: only whether a straw has been hit or not is known;
+  \vspace{2mm}
 
-qt
-\fi
+  \item The reconstruction of the hit position is performed using:
+  \vspace{1mm}
+
+    \begin{itemize}
+        \item the straw direction;
+        \vspace{1mm}
+
+        \item the straw midpoints $(x,y)$;
+        \vspace{1mm}
+        \item the straw $z$ coordinate.
+    \end{itemize} 
+    \vspace{2mm}
+    \item The intersection of two straw in two different faces, in the same plane, is considered to be the hit point of a plane;
+    \vspace{1mm}
+    \item  Two intersection points are found $\rightarrow$ reconstructed line.
+  \end{itemize} 
+  \end{column}
+  \begin{column}{0.5 \framewidth}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8 \columnwidth]{figures/png/Screenshot_20240408_154724.png}
+      \label{fig:enter-label}
+  \end{figure}
+  \end{column}
+
+  \end{columns}
+  \end{frame}
+  \begin{frame}{Combo, Stereo Hits and Reconstructed line}
+    \vspace{-3mm}
+\begin{columns}
+  \begin{column}{0.5\framewidth}
+    \vspace{-20mm}
+
+    $$\textbf{\text{1. Geometrical Combo Hits}}$$
+    Determination of a unique straw in a panel:
+    \begin{itemize}
+      \item mean of straws midpoint $(x,y,z)$;
+      \item straws direction $(x,y)$.
+    \end{itemize}
+  \end{column}
+  \begin{column}{0.5\framewidth}
+    $$\textbf{\text{2. Geometrical Stereo Hits}}$$
+    Determination of the hit point in a plane:
+    \begin{itemize}
+      \item intersection point $(x,y)$ using the two straws directions and midpoints;
+      \item mean of $z$ coordinate between faces.
+    \end{itemize}
+  \end{column}
+\end{columns}
+\vspace{5mm}
+
+$$\textbf{\text{3. Reconstructed Line}}$$
+Determination of a unique reconstructed track:
+\begin{itemize}
+  \item one stereo hit per plane: one line reconstructed geometrically;
+  \item the intersection point of the line with panels is found knowing the $z$ coordinate. 
+\end{itemize}
+
+  \end{frame}
+
+\begin{frame}{Results}
+\end{frame}
 \end{document}

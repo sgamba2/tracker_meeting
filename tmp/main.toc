@@ -1,2 +1,1 @@
-\beamer@endinputifotherversion {3.26pt}
-\select@language {english}
+\babel@toc {english}{}\relax 
