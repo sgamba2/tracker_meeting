@@ -29,42 +29,42 @@ void plot_panel_bias_vs_x_prof_all(){
  TProfile* p0=h0->ProfileX();
  p0->Draw("");
  p0->GetXaxis()->SetTitle("long. pos. [mm]");
- p0->SetTitle("Run 1210, plane0, panel0: profile #deltax vs x");
- p0->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p0->SetTitle("Run 1210, plane0, panel0: profile #Deltax vs x");
+ p0->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  c1->cd(2);
  TProfile* p1=h1->ProfileX();
  p1->GetXaxis()->SetTitle("long. pos. [mm]");
- p1->SetTitle("Run 1210, plane0, panel1: profile #deltax vs x");
- p1->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p1->SetTitle("Run 1210, plane0, panel1: profile #Deltax vs x");
+ p1->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p1->Draw("");
  c1->cd(3);
  TProfile* p2=h2->ProfileX();
  p2->GetXaxis()->SetTitle("long. pos. [mm]");
- p2->SetTitle("Run 1210, plane0, panel2: profile #deltax vs x");
- p2->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p2->SetTitle("Run 1210, plane0, panel2: profile #Deltax vs x");
+ p2->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p2->Draw("");
  c1->cd(4);
  TProfile* p3=h3->ProfileX();
  p3->GetXaxis()->SetTitle("long. pos. [mm]");
- p3->SetTitle("Run 1210, plane0, panel3: profile #deltax vs x");
- p3->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p3->SetTitle("Run 1210, plane0, panel3: profile #Deltax vs x");
+ p3->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p3->Draw("");
  c1->cd(5);
  TProfile* p4=h4->ProfileX();
  p4->GetXaxis()->SetTitle("long. pos. [mm]");
- p4->SetTitle("Run 1210, plane0, panel4: profile #deltax vs x");
- p4->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p4->SetTitle("Run 1210, plane0, panel4: profile #Deltax vs x");
+ p4->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p4->Draw("");
  c1->cd(6);
  TProfile* p5= h5->ProfileX();
  p5->GetXaxis()->SetTitle("long. pos. [mm]");
- p5->SetTitle("Run 1210, plane0, panel5: profile #deltax vs x");
- p5->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p5->SetTitle("Run 1210, plane0, panel5: profile #Deltax vs x");
+ p5->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p5->Draw("");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_prof_bias.pdf");
@@ -138,8 +138,8 @@ void plot_panel_bias_vs_x_prof_0(){
  c2->cd(1);
  h0->Draw("");
  h0->GetXaxis()->SetTitle("long. pos. [mm]");
- h0->SetTitle("Run 1210, plane0, panel0: #deltax vs x");
- h0->GetYaxis()->SetTitle("#deltax [mm]");
+ h0->SetTitle("Run 1210, plane0, panel0: #Deltax vs x");
+ h0->GetYaxis()->SetTitle("#Deltax [mm]");
  h0->SetMarkerStyle(7);
 
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias_vs_x.pdf");
@@ -151,8 +151,8 @@ void plot_panel_bias_vs_x_prof_0(){
  TProfile* p0=h0->ProfileX();
  p0->Draw("");
  p0->GetXaxis()->SetTitle("long. pos. [mm]");
- p0->SetTitle("Run 1210, plane0, panel0: profile #deltax vs x");
- p0->GetYaxis()->SetTitle("prof. #deltax [mm]");
+ p0->SetTitle("Run 1210, plane0, panel0: profile #Deltax vs x");
+ p0->GetYaxis()->SetTitle("prof. #Deltax [mm]");
  p0->SetMarkerStyle(1);
 
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias_vs_x_prof.pdf");
@@ -176,7 +176,7 @@ void plot_x_bias(){
  h0->SetBarOffset(0.5);
  h0->GetXaxis()->SetRangeUser(-200.,200.);
  h0->GetXaxis()->SetTitle("x_{panel} [mm]");
- h0->SetTitle("Run 1210, plane0, panel0: #deltax, panel frame");
+ h0->SetTitle("Run 1210, plane0, panel0: #Deltax, panel frame");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias.pdf");
 
