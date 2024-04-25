@@ -85,7 +85,8 @@ void plot_myz(){
   p0->GetYaxis()->SetTitle("m_{yz,rec}");
 
   p0->Draw("");
- c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec_prof.pdf");
+
 
 }
 void plot_mxy(){
@@ -102,7 +103,7 @@ void plot_mxy(){
   p0->GetYaxis()->SetTitle("m_{yx,rec}");
 
   p0->Draw("");
-  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy_vs_mxy_rec.pdf");
+  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myx_vs_myx_rec_prof.pdf");
 
 }
 
