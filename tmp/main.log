@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  24 APR 2024 20:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  24 APR 2024 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -923,6 +923,12 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1140,31 +1146,63 @@ l.308   \end{frame}
 <figures/pdf/x_panel0.pdf, id=121, 569.12625pt x 388.45125pt>
 File: figures/pdf/x_panel0.pdf Graphic file (type pdf)
 <use figures/pdf/x_panel0.pdf>
-Package pdftex.def Info: figures/pdf/x_panel0.pdf  used on input line 363.
-(pdftex.def)             Requested size: 136.91862pt x 93.44951pt.
+Package pdftex.def Info: figures/pdf/x_panel0.pdf  used on input line 374.
+(pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 \end{frame}
+l.374 \end{frame}
                  
-<figures/pdf/panel_00_x_bias.pdf, id=122, 569.12625pt x 388.45125pt>
+<figures/pdf/panel_00_x_bias_vs_x.pdf, id=122, 569.12625pt x 388.45125pt>
+File: figures/pdf/panel_00_x_bias_vs_x.pdf Graphic file (type pdf)
+<use figures/pdf/panel_00_x_bias_vs_x.pdf>
+Package pdftex.def Info: figures/pdf/panel_00_x_bias_vs_x.pdf  used on input li
+ne 374.
+(pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.374 \end{frame}
+                 
+<figures/pdf/panel_00_x_bias.pdf, id=123, 569.12625pt x 388.45125pt>
 File: figures/pdf/panel_00_x_bias.pdf Graphic file (type pdf)
 <use figures/pdf/panel_00_x_bias.pdf>
-Package pdftex.def Info: figures/pdf/panel_00_x_bias.pdf  used on input line 36
-3.
-(pdftex.def)             Requested size: 136.91862pt x 93.44951pt.
+Package pdftex.def Info: figures/pdf/panel_00_x_bias.pdf  used on input line 37
+4.
+(pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.363 \end{frame}
-                  [6
+l.374 \end{frame}
+                 
+<figures/pdf/panel_00_x_bias_vs_x_prof.pdf, id=124, 569.12625pt x 388.45125pt>
+File: figures/pdf/panel_00_x_bias_vs_x_prof.pdf Graphic file (type pdf)
+<use figures/pdf/panel_00_x_bias_vs_x_prof.pdf>
+Package pdftex.def Info: figures/pdf/panel_00_x_bias_vs_x_prof.pdf  used on inp
+ut line 374.
+(pdftex.def)             Requested size: 171.14764pt x 116.81485pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.374 \end{frame}
+                 
+Overfull \vbox (18.02835pt too high) detected at line 374
+ []
+
+[6
 
  <./figures/pdf/x_panel0.pdf, page is rotated 90 degrees> <./figures/pdf/panel_
-00_x_bias.pdf, page is rotated 90 degrees>]
+00_x_bias_vs_x.pdf, page is rotated 90 degrees> <./figures/pdf/panel_00_x_bias.
+pdf, page is rotated 90 degrees> <./figures/pdf/panel_00_x_bias_vs_x_prof.pdf, 
+page is rotated 90 degrees>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1185,10 +1223,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28139 strings out of 477985
- 573196 string characters out of 5839380
+ 28153 strings out of 477985
+ 573821 string characters out of 5839380
  1860388 words of memory out of 6000000
- 47727 multiletter control sequences out of 15000+600000
+ 47739 multiletter control sequences out of 15000+600000
  559150 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  127i,15n,122p,411b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1198,10 +1236,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 ve/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on tmp/main.pdf (6 pages, 394177 bytes).
+Output written on tmp/main.pdf (6 pages, 509051 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 126 compressed objects within 2 object streams
+ 335 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
  14 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 
