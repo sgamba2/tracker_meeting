@@ -68,6 +68,8 @@ void plot_panel_bias_vs_x_prof_all(){
 
  p5->Draw("");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_prof_bias.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_prof_bias.png");
+
  //h2->Draw("sames");
 }
 void plot_myz(){
@@ -86,6 +88,7 @@ void plot_myz(){
 
   p0->Draw("");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec_prof.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec_prof.png");
 
 
 }
@@ -104,6 +107,7 @@ void plot_mxy(){
 
   p0->Draw("");
   c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myx_vs_myx_rec_prof.pdf");
+  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myx_vs_myx_rec_prof.png");
 
 }
 
@@ -124,6 +128,7 @@ void plot_panel_0(){
  h0->SetTitle("Run 1210, plane0, panel0: x vs y, panel frame");
  h0->GetYaxis()->SetTitle("y_{panel} [mm]");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/xp_vs_yp_panel0.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/xp_vs_yp_panel0.png");
 
  //h2->Draw("sames");
 }
@@ -144,6 +149,7 @@ void plot_panel_bias_vs_x_prof_0(){
  h0->SetMarkerStyle(7);
 
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias_vs_x.pdf");
+ c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias_vs_x.png");
 
  h0->RebinX(8);
 
@@ -157,6 +163,7 @@ void plot_panel_bias_vs_x_prof_0(){
  p0->SetMarkerStyle(1);
 
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias_vs_x_prof.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias_vs_x_prof.png");
 
  //h2->Draw("sames");
 }
@@ -180,6 +187,7 @@ void plot_x_bias(){
  h0->SetTitle("Run 1210, plane0, panel0: #Deltax, panel frame");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias.png");
 
  //h2->Draw("sames");
 }
@@ -202,6 +210,7 @@ void plot_myz_all(){
  h0->SetTitle("Run 1210: m_{yz,true} distribution");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz.png");
 
  TH1F * h1 = (TH1F*)f->Get("TCalStat/trk/myz_rec");
 
@@ -216,6 +225,7 @@ void plot_myz_all(){
  h1->SetTitle("Run 1210: m_{yz,rec} distribution");
  h1->GetYaxis()->SetTitle("counts");
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_rec.pdf");
+ c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_rec.png");
 
  TH1F * h2 = (TH1F*)f->Get("TCalStat/trk/myz_vs_myz_rec");
 
@@ -230,6 +240,7 @@ void plot_myz_all(){
  h2->SetTitle("Run 1210: m_{yz,rec} vs m_{yz,true}");
  h2->GetYaxis()->SetTitle("m_{yz,rec}");
  c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec.pdf");
+ c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec.png");
 
 }
 
@@ -252,6 +263,7 @@ void plot_mxy_all(){
  h0->SetTitle("Run 1210: m_{yx,true} distribution");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy.png");
 
  TH1F * h1 = (TH1F*)f->Get("TCalStat/trk/mxy_rec");
 
@@ -266,6 +278,7 @@ void plot_mxy_all(){
  h1->SetTitle("Run 1210: m_{yx,rec} distribution");
  h1->GetYaxis()->SetTitle("counts");
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy_rec.pdf");
+ c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy_rec.png");
 
  TH1F * h2 = (TH1F*)f->Get("TCalStat/trk/mxy_vs_mxy_rec");
 
@@ -280,6 +293,9 @@ void plot_mxy_all(){
  h2->SetTitle("Run 1210: m_{yx,rec} vs m_{yx,true}");
  h2->GetYaxis()->SetTitle("m_{yx,rec}");
  c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myx_vs_myx_rec.pdf");
+
+ c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myx_vs_myx_rec.png");
+
 
 }
 
@@ -304,6 +320,7 @@ void plot_x(){
 
  h0->SetTitle("Run 1210, plane0, panel0: x, panel frame");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/x_panel0.pdf");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/x_panel0.png");
 
  //h2->Draw("sames");
 }
