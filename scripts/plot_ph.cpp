@@ -9,12 +9,12 @@ void plot_panel_bias_vs_x_prof_all(){
 
  TFile *f=TFile::Open("prova.hist");
 
- TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_00/panel_00_x_bias_vs_x");
- TH2F * h1 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_01/panel_01_x_bias_vs_x");
- TH2F * h2 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_02/panel_02_x_bias_vs_x");
- TH2F * h3 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_03/panel_03_x_bias_vs_x");
- TH2F * h4 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_04/panel_04_x_bias_vs_x");
- TH2F * h5 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_05/panel_05_x_bias_vs_x");
+ TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_00/panel_00_x_bias_vs_x_true");
+ TH2F * h1 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_01/panel_01_x_bias_vs_x_true");
+ TH2F * h2 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_02/panel_02_x_bias_vs_x_true");
+ TH2F * h3 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_03/panel_03_x_bias_vs_x_true");
+ TH2F * h4 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_04/panel_04_x_bias_vs_x_true");
+ TH2F * h5 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_05/panel_05_x_bias_vs_x_true");
 
  h0->RebinX(8);
  h1->RebinX(8);
@@ -138,13 +138,13 @@ void plot_panel_bias_vs_x_prof_0(){
 
  TFile *f=TFile::Open("prova.hist");
 
- TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_00/panel_00_x_bias_vs_x");
+ TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_00/panel_00_x_bias_vs_x_true");
 
  TCanvas * c2 = new TCanvas("c2","c2");
  c2->cd(1);
  h0->Draw("");
  h0->GetXaxis()->SetTitle("long. pos. [mm]");
- h0->SetTitle("Run 1210, plane0, panel0: #Deltax vs x");
+ h0->SetTitle("Run 1210, plane0, panel0: #Deltax vs x_{true}");
  h0->GetYaxis()->SetTitle("#Deltax [mm]");
  h0->SetMarkerStyle(7);
 
