@@ -242,32 +242,83 @@
 \includegraphics[height=0.9cm]{figures/png/FNAL-Logo-NAL-Blue.png}\hspace{10mm}\includegraphics[height=1.6cm]{figures/pdf/cherubino.pdf}
 
 \end{frame}
-\begin{frame}{Introduction}
+\begin{frame}{Introduction: VST and calibration}
   \begin{itemize}
-  \item Reading out from the first station is expected soon;
-  \item We need to calibrate the standalone station with cosmics.
+  \item The first station is expected soon;
+  \vspace{1mm}
+  \item Reconstructing cosmic tracks and understanding resolutions requires calibrating the station.
   \end{itemize}
-  \vspace{1.5mm}
+  \vspace{3mm}
  Timing calibration:
+ \vspace{1mm}
   \begin{itemize}
-    \item drift velocity: $\Delta t$ versus longitudinal position;
-    \item channel to channel delays.
+    \item signal propagation and channel-to-channel delays for each straw.
   \end{itemize}
-  \vspace{1.5mm}
+  \vspace{3mm}
   What is it needed for this purpose?
+  \vspace{1mm}
   \begin{itemize}
-    \item unbiased reconstruction of the longitudinal position in a straw.
+    \item unbiased reconstruction of the track longitudinal position in a straw.
   \end{itemize}
-  \vspace{1.5mm}
+ 
+\end{frame}
+
+
+\begin{frame}{Introduction: station orientation}
+  
   During CM, there was a discussion related to the orientation of the station:
+  \vspace{1mm}
   \begin{itemize}
-    \item Vertical orientation is preferred for electronics and cooling system and because the station will be vertical during the experiment;
-  \item Horizontal orientation was chosen for the first calibration of a plane and enables an unbiased reconstruction.
+    \item Vertical orientation is preferred for gas system and because the station will be vertical during the experiment;
+    \vspace{1mm}
+  \item Horizontal orientation enables an unbiased reconstruction. First VST plane calibration was horizonal.
 \end{itemize}
-\vspace{1.5mm}
-  A simulation has been performed to reconstruct cosmics tracks with vertically oriented station,
+\vspace{3mm}
+Would running in vertical orientation provide data needed for calibrating?
+\vspace{3mm}
+\\
+A simulation has been performed to reconstruct cosmics tracks with vertically oriented station,
   aiming to understand possible biases in determining longitudinal position caused by the non-uniform illumination of a panel.
 \end{frame}
+
+\begin{frame}{Reconstruction of Cosmic tracks}
+  \begin{columns}
+    \begin{column}{0.6 \framewidth}
+      \begin{itemize}
+  \item The station is not yet calibrated: whether a straw has been hit or not is the only info we have;
+  \vspace{3mm}
+\item 4 hits per face to reconstruct one line:
+        \begin{itemize}
+          \item panel hits in each face $\rightarrow$ combo hits;
+          \item 2 combo hits in a plane $\rightarrow$ stereo hit;
+          \item 2 hits per plane $\rightarrow$ reconstructed track.
+        \end{itemize}
+        \vspace{3mm}
+
+  \item The reconstruction of the hit position is performed using:
+  \vspace{2mm}
+
+    \begin{itemize}
+        \item the straw direction  $(D_x,D_y)$;
+        \vspace{1mm}
+        \item the straw midpoints $(x,y)$;
+        \vspace{1mm}
+        \item the straw $z$ coordinate of faces.
+    \end{itemize} 
+  \end{itemize} 
+  \end{column}
+  \begin{column}{0.4 \framewidth}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.8 \columnwidth]{figures/png/Screenshot_20240408_154724.png}
+      \label{fig:enter-label}
+  \end{figure}
+  \end{column}
+
+  \end{columns}
+  \end{frame}
+
+
 \begin{frame}{Cosmics simulation and selection criteria}
   \begin{itemize}
     \item Simulated cosmics crossing only one station;
@@ -281,17 +332,20 @@
     \item To improve the resolution, $nhits_{panel_i}\leq 3$ were selected.
   \end{itemize}
 \end{frame}
+
+
+
 \begin{frame}{Panel illumination}
    \vspace{-3mm}
             \begin{figure}[H]
                 \centering
-                \includegraphics[width=0.8 \textwidth]{figures/pdf/xp_vs_yp_panel0.png}
+                \includegraphics[width=0.7 \textwidth]{figures/pdf/xp_vs_yp_panel0.png}
                 \label{fig:enter-label}
             \end{figure}
 \begin{itemize}
-  \item illumination pattern of a panel in a vertical orientation (panel frame);
-  \item the longest wires have no hits in the center;
-  \item these will be difficult to calibrate (noise).
+  \item spotty and non uniform illumination pattern of a panel in a vertical orientation (panel frame);
+    \item same for all panels;
+  \item wires have no hits in the center.
 \end{itemize}
 
 \end{frame}
@@ -299,72 +353,6 @@
 
 
 
-\begin{frame}{Reconstruction of Cosmic tracks}
-  \begin{columns}
-    \begin{column}{0.5 \framewidth}
-      \begin{itemize}
-  \item The station is not yet calibrated: whether a straw has been hit or not is the only info we have;
-  \vspace{2mm}
-
-  \item The reconstruction of the hit position is performed using:
-  \vspace{1mm}
-
-    \begin{itemize}
-        \item the straw direction;
-        \vspace{1mm}
-
-        \item the straw midpoints $(x,y)$;
-        \vspace{1mm}
-        \item the straw $z$ coordinate.
-    \end{itemize} 
-    \vspace{2mm}
-    \item The intersection of two straw in two different faces, in the same plane, is considered to be the hit point;
-    \vspace{1mm}
-    \item  Two intersection points are found $\rightarrow$ reconstructed line.
-  \end{itemize} 
-  \end{column}
-  \begin{column}{0.5 \framewidth}
-    \begin{figure}[H]
-      \centering
-      \includegraphics[width=0.8 \columnwidth]{figures/png/Screenshot_20240408_154724.png}
-      \label{fig:enter-label}
-  \end{figure}
-  \end{column}
-
-  \end{columns}
-  \end{frame}
-  \begin{frame}{Combo, Stereo Hits and Reconstructed line}
-    \vspace{-3mm}
-\begin{columns}
-  \begin{column}{0.5\framewidth}
-    \vspace{-15mm}
-
-    $$\textbf{\text{1. Geometrical Combo Hits}}$$
-    Determination of a unique straw in a panel:
-    \begin{itemize}
-      \item mean of straws midpoint $(x_m,y_m,z_m)$;
-      \item straws direction $(D_x,D_y)$.
-    \end{itemize}
-  \end{column}
-  \begin{column}{0.5\framewidth}
-    $$\textbf{\text{2. Geometrical Stereo Hits}}$$
-    Determination of the hit point in a plane:
-    \begin{itemize}
-      \item intersection point $(x,y)$ using the two straws directions and midpoints from two panels;
-      \item mean of $z$ coordinate between the two faces.
-    \end{itemize}
-  \end{column}
-\end{columns}
-\vspace{5mm}
-
-$$\textbf{\text{3. Reconstructed Line}}$$
-Determination of a unique reconstructed track:
-\begin{itemize}
-  \item one stereo hit per plane: one line reconstructed geometrically;
-  \item the intersection point of the line with panels is found knowing the $z_m$ coordinate. 
-\end{itemize}
-
-  \end{frame}
 
 \begin{frame}{Results: longitudinal position reconstruction}
   \vspace{-3mm}
@@ -378,7 +366,7 @@ Determination of a unique reconstructed track:
     \vspace{-12mm}
     \begin{figure}[H]
       \centering
-      \includegraphics[width=  \textwidth]{figures/pdf/panel_00_x_bias.png}
+      \includegraphics[width=  \textwidth]{figures/pdf/xp_vs_yp_panel0.png}
       \label{fig:enter-label}
   \end{figure}
      
@@ -387,96 +375,159 @@ Determination of a unique reconstructed track:
       \begin{itemize}
         \item all histograms show longitudinal position in the panel frame;
         \vspace{3mm}
-      \item reconstructed longitudinal position distribution presents peaks in the overlaps with other panels (four spots as in previous slides);
+      \item reconstructed longitudinal position distribution presents peaks in the overlaps with other panels;
+        \vspace{3mm}
+      \item different straws make different peaks.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+
+
+\begin{frame}{Results: longitudinal position reconstruction bias}
+  \vspace{-3mm}
+  \begin{columns}
+    \begin{column}{0.5\framewidth}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias.png}
+        \label{fig:enter-label}
+    \end{figure}
+    \vspace{-12mm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=  \textwidth]{figures/pdf/panel_00_x_bias_vs_x.png}
+      \label{fig:enter-label}
+  \end{figure}
+     
+    \end{column}
+    \begin{column}{0.5\framewidth}
+      \begin{itemize}
+       
+      \item reconstructed longitudinal position distribution presents peaks in the overlaps with other panels;
         \vspace{3mm}
       \item $\Delta x = x_{rec}-x_{true}$;
       \vspace{3mm}
-        \item the longitudinal position bias range is about -6$\div$6 cm.
+        \item the longitudinal position bias range is about -6$\div$6 cm;
+        \vspace{3mm}
+        \item 2D distribution of $\Delta x$ versus $x_{true}$ shows four different spots referring to the overlap regions;
+        \vspace{3mm}
+        \item the first spot (CAL side) is referred to ninety degrees panels overlap.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
-
 
 
 \begin{frame}{Results: systematics on longitudinal position reconstruction}
-  \vspace{-3mm}
-  \begin{columns}
-    \begin{column}{0.5\framewidth}
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias_vs_x.png}
-        \label{fig:enter-label}
-    \end{figure}
-    \vspace{-12mm}
+
+   
     \begin{figure}[H]
       \centering
-      \includegraphics[width= \textwidth]{figures/pdf/panel_00_x_bias_vs_x_prof.png}
+      \includegraphics[width= 0.5\textwidth]{figures/pdf/panel_00_x_bias_vs_x_prof.png}
       \label{fig:enter-label}
   \end{figure}
-    \end{column}
-    \begin{column}{0.5\framewidth}
+   
       \begin{itemize}
-        \item 2D distribution of $\Delta x$ versus $x_{true}$ shows four different spots referring to the overlap regions;
+      
+        
+        \item  profile of the $\Delta x$ versus $x_{true}$ shows a systematic effect in determining the longitudinal position of a range greater than -4$\div$4 cm;
         \vspace{3mm}
-        \item the first spot (CAL side) is referred to ninety degrees panels overlap;
+        \item the first part (CAL side) is referred to ninety degrees panels overlap;
         \vspace{3mm}
-        \item  profile of the $\Delta x$ versus $x_{true}$ shows a systematic effect in determining the longitudinal position of a range greater than -4$\div$4 cm.
-
+        \item the mean is not a good estimator of the bias, because the distribution is referred to multiple straws.
       \end{itemize}
 
-    
-    \end{column}
-  \end{columns}
+  
+\end{frame}
+
+\begin{frame}{Direction of the reconstructed line}
+  \vspace{-3mm}
+
+  \begin{columns}
+    \begin{column}{0.5\framewidth}
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width= \textwidth]{figures/pdf/myz.png}
+    \label{fig:enter-label}
+\end{figure}
+\vspace{-12mm}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width= \textwidth]{figures/pdf/myz_rec.png}
+  \label{fig:enter-label}
+\end{figure}
+
+\end{column}
+\begin{column}{0.5\framewidth}
+
+  \begin{itemize}
+      
+    \item $m_{yz}=\frac{\Delta y}{\Delta z}$;
+    \vspace{2mm}
+    \item first histogram shows true $m_{yz}$;
+    \vspace{2mm}
+    \item second histogram shows the reconstructed $m_{yz}$;
+    \vspace{2mm}
+    \item true hits position far away from the straws midpoint lead to the misreconstructed $zy$ and $xy$ direction lines.
+  \end{itemize}
+\end{column}
+\end{columns}
 \end{frame}
 
 
-
-\begin{frame}{Results: systematics on track direction reconstruction}
-  \vspace{-3mm}
-  \begin{columns}
-    \begin{column}{0.5\framewidth}
-      \begin{figure}[H]
-        \centering
-        \includegraphics[width= \textwidth]{figures/pdf/myz_vs_myz_rec_prof.png}
-        \label{fig:enter-label}
-    \end{figure}
-     
-    \vspace{-12mm}
-    \begin{figure}[H]
-      \centering
-      \includegraphics[width= \textwidth]{figures/pdf/myx_vs_myx_rec_prof.png}
-      \label{fig:enter-label}
-  \end{figure}
-    \end{column}
-    \begin{column}{0.5\framewidth}
-      \vspace{-4mm}
-
-      \begin{itemize}
-        \item $m_{yz}=\frac{\Delta y}{\Delta z}$ and $m_{yx}=\frac{\Delta y}{\Delta x}$;
-        \vspace{2mm}
-        \item first histogram shows the mean of reconstructed $m_{yz}$ versus the true one and it shows a systematic effect in determining the $zy$ track direction (-4$\div$3);
-        \vspace{2mm}
-        \item second histogram shows the mean of reconstructed $m_{yx}$ versus the true one and it shows a systematic effect in determining the $xy$ track direction (-1$\div$1);
-        \vspace{2mm}
-        \item true hits far away from the straws midpoint lead to the misreconstructed $zy$ and $xy$ direction lines.
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
 \begin{frame}{Conclusions}
   In a vertical configuration of the station:
-  \vspace{4mm}
+  \vspace{6mm}
   \begin{itemize}
-    \item as shown in the panel illumination plot, long wires will not be correctly calibrated due to the fact that only the extreme parts (noisy) of the straw are hit;
-    \vspace{2mm}
-    \item there will be systematic effects in determining the longitudinal position of a range greater than -4$\div$4 cm;
-    \vspace{2mm}
-    \item there will be systematic effects in determining tracks $xy$ and $zy$ directions.
+    \item illumination of panels is very non uniform, no hits in the central part of wires;
+    \vspace{4mm}
+    \item there will be systematic effects in determining the longitudinal position ($\sim$ cm) due to the panel orientation;
+    \vspace{4mm}
+    \item calibration is expected to be very difficult in these conditions.
   \end{itemize}
-  \vspace{4mm}
-  At the end, we won't be able to perform a good timing calibration.
 \end{frame}
+
+
+
+
+\begin{frame}{Backup Slide: Combo, Stereo Hits and Reconstructed line}
+  \vspace{-3mm}
+\begin{columns}
+\begin{column}{0.5\framewidth}
+  \vspace{-15mm}
+
+  $$\textbf{\text{1. Geometrical Combo Hits}}$$
+  Determination of a unique straw in a panel:
+  \begin{itemize}
+    \item mean of straws midpoint $(x_m,y_m,z_m)$;
+    \item straws direction $(D_x,D_y)$.
+  \end{itemize}
+\end{column}
+\begin{column}{0.5\framewidth}
+  $$\textbf{\text{2. Geometrical Stereo Hits}}$$
+  Determination of the hit point in a plane:
+  \begin{itemize}
+    \item intersection point $(x,y)$ using the two straws directions and midpoints from two panels;
+    \item mean of $z$ coordinate between the two faces.
+  \end{itemize}
+\end{column}
+\end{columns}
+\vspace{5mm}
+
+$$\textbf{\text{3. Reconstructed Line}}$$
+Determination of a unique reconstructed track:
+\begin{itemize}
+\item one stereo hit per plane: one line reconstructed geometrically;
+\item the intersection point of the line with panels is found knowing the $z_m$ coordinate. 
+\end{itemize}
+
+\end{frame}
+
+
+
 \begin{frame}{Backup Slide}
   
       \begin{figure}[H]
@@ -485,11 +536,6 @@ Determination of a unique reconstructed track:
         \label{fig:enter-label}
     \end{figure}
   \end{frame}
-
-
-
-
-
 
   \begin{frame}{Backup Slide}
     \vspace{-3mm}
@@ -525,6 +571,37 @@ Determination of a unique reconstructed track:
 \end{column}
 \end{columns}
 \end{frame}
+\begin{frame}{Results: systematics on track direction reconstruction}
+  \vspace{-3mm}
+  \begin{columns}
+    \begin{column}{0.5\framewidth}
+      \begin{figure}[H]
+        \centering
+        \includegraphics[width= \textwidth]{figures/pdf/myz_vs_myz_rec_prof.png}
+        \label{fig:enter-label}
+    \end{figure}
+     
+    \vspace{-12mm}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width= \textwidth]{figures/pdf/myx_vs_myx_rec_prof.png}
+      \label{fig:enter-label}
+  \end{figure}
+    \end{column}
+    \begin{column}{0.5\framewidth}
+      \vspace{-4mm}
 
+      \begin{itemize}
+        \item $m_{yz}=\frac{\Delta y}{\Delta z}$ and $m_{yx}=\frac{\Delta y}{\Delta x}$;
+        \vspace{2mm}
+        \item first histogram shows the mean of reconstructed $m_{yz}$ versus the true one and it shows a systematic effect in determining the $zy$ track direction (-4$\div$3);
+        \vspace{2mm}
+        \item second histogram shows the mean of reconstructed $m_{yx}$ versus the true one and it shows a systematic effect in determining the $xy$ track direction (-1$\div$1);
+        \vspace{2mm}
+        \item true hits position far away from the straws midpoint lead to the misreconstructed $zy$ and $xy$ direction lines.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  25 APR 2024 17:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  26 APR 2024 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,6 +950,15 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
 )
 \openout1 = `main.aux'.
 
@@ -1124,13 +1133,13 @@ Package pdftex.def Info: figures/pdf/cherubino.pdf  used on input line 244.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
 st/fonts/enc/dvips/base/8r.enc} <./figures/png/mu2e_logo_oval.png> <./figures/p
 ng/FNAL-Logo-NAL-Blue.png> <./figures/pdf/cherubino.pdf>]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 270
+LaTeX Font Info:    Trying to load font information for U+msa on input line 264
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 270
+LaTeX Font Info:    Trying to load font information for U+msb on input line 264
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1140,209 +1149,247 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [3
 
 ]
-<figures/pdf/xp_vs_yp_panel0.png, id=60, 700.6175pt x 477.785pt>
-File: figures/pdf/xp_vs_yp_panel0.png Graphic file (type png)
-<use figures/pdf/xp_vs_yp_panel0.png>
-Package pdftex.def Info: figures/pdf/xp_vs_yp_panel0.png  used on input line 29
-7.
-(pdftex.def)             Requested size: 273.83728pt x 186.74365pt.
-
-Overfull \vbox (0.84557pt too high) detected at line 297
- []
-
-[4
-
- <./figures/pdf/xp_vs_yp_panel0.png>]
-<figures/png/Screenshot_20240408_154724.png, id=68, 457.71pt x 395.97937pt>
+<figures/png/Screenshot_20240408_154724.png, id=58, 457.71pt x 395.97937pt>
 File: figures/png/Screenshot_20240408_154724.png Graphic file (type png)
 <use figures/png/Screenshot_20240408_154724.png>
 Package pdftex.def Info: figures/png/Screenshot_20240408_154724.png  used on in
-put line 335.
-(pdftex.def)             Requested size: 136.91862pt x 118.45032pt.
+put line 319.
+(pdftex.def)             Requested size: 109.53323pt x 94.75905pt.
+ [4
 
-pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
-el}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.335   \end{frame}
-                    [5
-
- <./figures/png/Screenshot_20240408_154724.png>] [6
+ <./figures/png/Screenshot_20240408_154724.png>] [5
 
 ]
-<figures/pdf/x_panel0.png, id=84, 700.6175pt x 477.785pt>
+<figures/pdf/xp_vs_yp_panel0.png, id=76, 700.6175pt x 477.785pt>
+File: figures/pdf/xp_vs_yp_panel0.png Graphic file (type png)
+<use figures/pdf/xp_vs_yp_panel0.png>
+Package pdftex.def Info: figures/pdf/xp_vs_yp_panel0.png  used on input line 35
+1.
+(pdftex.def)             Requested size: 239.60567pt x 163.39978pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.351 \end{frame}
+                  [6
+
+ <./figures/pdf/xp_vs_yp_panel0.png>]
+<figures/pdf/x_panel0.png, id=83, 700.6175pt x 477.785pt>
 File: figures/pdf/x_panel0.png Graphic file (type png)
 <use figures/pdf/x_panel0.png>
-Package pdftex.def Info: figures/pdf/x_panel0.png  used on input line 398.
+Package pdftex.def Info: figures/pdf/x_panel0.png  used on input line 384.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.398 \end{frame}
+l.384 \end{frame}
                  
-<figures/pdf/panel_00_x_bias.png, id=85, 700.6175pt x 477.785pt>
-File: figures/pdf/panel_00_x_bias.png Graphic file (type png)
-<use figures/pdf/panel_00_x_bias.png>
-Package pdftex.def Info: figures/pdf/panel_00_x_bias.png  used on input line 39
-8.
+File: figures/pdf/xp_vs_yp_panel0.png Graphic file (type png)
+<use figures/pdf/xp_vs_yp_panel0.png>
+Package pdftex.def Info: figures/pdf/xp_vs_yp_panel0.png  used on input line 38
+4.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.398 \end{frame}
+l.384 \end{frame}
                  
-Overfull \vbox (17.82275pt too high) detected at line 398
+Overfull \vbox (17.82275pt too high) detected at line 384
  []
 
 [7
 
- <./figures/pdf/x_panel0.png> <./figures/pdf/panel_00_x_bias.png>]
-<figures/pdf/panel_00_x_bias_vs_x.png, id=93, 700.6175pt x 477.785pt>
+ <./figures/pdf/x_panel0.png>]
+<figures/pdf/panel_00_x_bias.png, id=91, 700.6175pt x 477.785pt>
+File: figures/pdf/panel_00_x_bias.png Graphic file (type png)
+<use figures/pdf/panel_00_x_bias.png>
+Package pdftex.def Info: figures/pdf/panel_00_x_bias.png  used on input line 42
+1.
+(pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.421 \end{frame}
+                 
+<figures/pdf/panel_00_x_bias_vs_x.png, id=92, 700.6175pt x 477.785pt>
 File: figures/pdf/panel_00_x_bias_vs_x.png Graphic file (type png)
 <use figures/pdf/panel_00_x_bias_vs_x.png>
 Package pdftex.def Info: figures/pdf/panel_00_x_bias_vs_x.png  used on input li
-ne 431.
+ne 421.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.431 \end{frame}
+l.421 \end{frame}
                  
-<figures/pdf/panel_00_x_bias_vs_x_prof.png, id=94, 700.6175pt x 477.785pt>
-File: figures/pdf/panel_00_x_bias_vs_x_prof.png Graphic file (type png)
-<use figures/pdf/panel_00_x_bias_vs_x_prof.png>
-Package pdftex.def Info: figures/pdf/panel_00_x_bias_vs_x_prof.png  used on inp
-ut line 431.
-(pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
-el}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.431 \end{frame}
-                 
-Overfull \vbox (17.82275pt too high) detected at line 431
+Overfull \vbox (17.82275pt too high) detected at line 421
  []
 
 [8
 
- <./figures/pdf/panel_00_x_bias_vs_x.png> <./figures/pdf/panel_00_x_bias_vs_x_p
-rof.png>]
-<figures/pdf/myz_vs_myz_rec_prof.png, id=101, 700.6175pt x 477.785pt>
-File: figures/pdf/myz_vs_myz_rec_prof.png Graphic file (type png)
-<use figures/pdf/myz_vs_myz_rec_prof.png>
-Package pdftex.def Info: figures/pdf/myz_vs_myz_rec_prof.png  used on input lin
-e 466.
+ <./figures/pdf/panel_00_x_bias.png> <./figures/pdf/panel_00_x_bias_vs_x.png>]
+<figures/pdf/panel_00_x_bias_vs_x_prof.png, id=99, 700.6175pt x 477.785pt>
+File: figures/pdf/panel_00_x_bias_vs_x_prof.png Graphic file (type png)
+<use figures/pdf/panel_00_x_bias_vs_x_prof.png>
+Package pdftex.def Info: figures/pdf/panel_00_x_bias_vs_x_prof.png  used on inp
+ut line 444.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.466 \end{frame}
-                 
-<figures/pdf/myx_vs_myx_rec_prof.png, id=102, 700.6175pt x 477.785pt>
-File: figures/pdf/myx_vs_myx_rec_prof.png Graphic file (type png)
-<use figures/pdf/myx_vs_myx_rec_prof.png>
-Package pdftex.def Info: figures/pdf/myx_vs_myx_rec_prof.png  used on input lin
-e 466.
+l.444 \end{frame}
+                  [9
+
+ <./figures/pdf/panel_00_x_bias_vs_x_prof.png>]
+<figures/pdf/myz.png, id=106, 700.6175pt x 477.785pt>
+File: figures/pdf/myz.png Graphic file (type png)
+<use figures/pdf/myz.png>
+Package pdftex.def Info: figures/pdf/myz.png  used on input line 478.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.466 \end{frame}
+l.478 \end{frame}
                  
-Overfull \vbox (17.82275pt too high) detected at line 466
+<figures/pdf/myz_rec.png, id=107, 700.6175pt x 477.785pt>
+File: figures/pdf/myz_rec.png Graphic file (type png)
+<use figures/pdf/myz_rec.png>
+Package pdftex.def Info: figures/pdf/myz_rec.png  used on input line 478.
+(pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.478 \end{frame}
+                 
+Overfull \vbox (17.82275pt too high) detected at line 478
  []
 
-[9
+[10
 
- <./figures/pdf/myz_vs_myz_rec_prof.png> <./figures/pdf/myx_vs_myx_rec_prof.png
->] [10
+ <./figures/pdf/myz.png> <./figures/pdf/myz_rec.png>] [11
+
+] [12
 
 ]
-<figures/pdf/plane0_prof_bias.png, id=116, 700.6175pt x 477.785pt>
+<figures/pdf/plane0_prof_bias.png, id=128, 700.6175pt x 477.785pt>
 File: figures/pdf/plane0_prof_bias.png Graphic file (type png)
 <use figures/pdf/plane0_prof_bias.png>
-Package pdftex.def Info: figures/pdf/plane0_prof_bias.png  used on input line 4
-87.
+Package pdftex.def Info: figures/pdf/plane0_prof_bias.png  used on input line 5
+38.
 (pdftex.def)             Requested size: 342.2953pt x 233.4314pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.487   \end{frame}
+l.538   \end{frame}
                    
-Overfull \vbox (25.90915pt too high) detected at line 487
+Overfull \vbox (25.90915pt too high) detected at line 538
  []
 
-[11
+[13
 
  <./figures/pdf/plane0_prof_bias.png>]
-<figures/pdf/myz.png, id=123, 700.6175pt x 477.785pt>
 File: figures/pdf/myz.png Graphic file (type png)
 <use figures/pdf/myz.png>
-Package pdftex.def Info: figures/pdf/myz.png  used on input line 527.
+Package pdftex.def Info: figures/pdf/myz.png  used on input line 573.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.527 \end{frame}
+l.573 \end{frame}
                  
-<figures/pdf/mxy.png, id=124, 700.6175pt x 477.785pt>
+<figures/pdf/mxy.png, id=136, 700.6175pt x 477.785pt>
 File: figures/pdf/mxy.png Graphic file (type png)
 <use figures/pdf/mxy.png>
-Package pdftex.def Info: figures/pdf/mxy.png  used on input line 527.
+Package pdftex.def Info: figures/pdf/mxy.png  used on input line 573.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.527 \end{frame}
+l.573 \end{frame}
                  
-<figures/pdf/myz_rec.png, id=125, 700.6175pt x 477.785pt>
 File: figures/pdf/myz_rec.png Graphic file (type png)
 <use figures/pdf/myz_rec.png>
-Package pdftex.def Info: figures/pdf/myz_rec.png  used on input line 527.
+Package pdftex.def Info: figures/pdf/myz_rec.png  used on input line 573.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.527 \end{frame}
+l.573 \end{frame}
                  
-<figures/pdf/mxy_rec.png, id=126, 700.6175pt x 477.785pt>
+<figures/pdf/mxy_rec.png, id=137, 700.6175pt x 477.785pt>
 File: figures/pdf/mxy_rec.png Graphic file (type png)
 <use figures/pdf/mxy_rec.png>
-Package pdftex.def Info: figures/pdf/mxy_rec.png  used on input line 527.
+Package pdftex.def Info: figures/pdf/mxy_rec.png  used on input line 573.
 (pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
 el}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.527 \end{frame}
+l.573 \end{frame}
                  
-Overfull \vbox (17.82275pt too high) detected at line 527
+Overfull \vbox (17.82275pt too high) detected at line 573
  []
 
-[12
+[14
 
- <./figures/pdf/myz.png> <./figures/pdf/mxy.png> <./figures/pdf/myz_rec.png> <.
-/figures/pdf/mxy_rec.png>]
+ <./figures/pdf/mxy.png> <./figures/pdf/mxy_rec.png>]
+<figures/pdf/myz_vs_myz_rec_prof.png, id=144, 700.6175pt x 477.785pt>
+File: figures/pdf/myz_vs_myz_rec_prof.png Graphic file (type png)
+<use figures/pdf/myz_vs_myz_rec_prof.png>
+Package pdftex.def Info: figures/pdf/myz_vs_myz_rec_prof.png  used on input lin
+e 605.
+(pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.605 \end{frame}
+                 
+<figures/pdf/myx_vs_myx_rec_prof.png, id=145, 700.6175pt x 477.785pt>
+File: figures/pdf/myx_vs_myx_rec_prof.png Graphic file (type png)
+<use figures/pdf/myx_vs_myx_rec_prof.png>
+Package pdftex.def Info: figures/pdf/myx_vs_myx_rec_prof.png  used on input lin
+e 605.
+(pdftex.def)             Requested size: 171.14764pt x 116.71205pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{fig:enter-lab
+el}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.605 \end{frame}
+                 
+Overfull \vbox (17.82275pt too high) detected at line 605
+ []
+
+[15
+
+ <./figures/pdf/myz_vs_myz_rec_prof.png> <./figures/pdf/myx_vs_myx_rec_prof.png
+>]
 \tf@nav=\write6
 \openout6 = `main.nav'.
 
@@ -1363,11 +1410,11 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 28226 strings out of 477985
- 575340 string characters out of 5839380
+ 28239 strings out of 477985
+ 575452 string characters out of 5839380
  1861388 words of memory out of 6000000
- 47793 multiletter control sequences out of 15000+600000
- 559150 words of font info for 86 fonts, out of 8000000 for 9000
+ 47799 multiletter control sequences out of 15000+600000
+ 560286 words of font info for 87 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  127i,15n,122p,411b,743s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
@@ -1377,10 +1424,10 @@ r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
 -dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/ut
 mri8a.pfb>
-Output written on tmp/main.pdf (12 pages, 468987 bytes).
+Output written on tmp/main.pdf (15 pages, 471788 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
+ 192 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
+ 32 named destinations out of 1000 (max. 500000)
  159 words of extra memory for PDF output out of 10000 (max. 10000000)
 
