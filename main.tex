@@ -249,13 +249,13 @@
   \item Reconstructing cosmic tracks and understanding resolutions requires calibrating the station.
   \end{itemize}
   \vspace{3mm}
- Timing calibration:
+ First calibration:
  \vspace{1mm}
   \begin{itemize}
     \item signal propagation and channel-to-channel delays for each straw.
   \end{itemize}
   \vspace{3mm}
-  What is it needed for this purpose?
+  What is it needed?
   \vspace{1mm}
   \begin{itemize}
     \item unbiased reconstruction of the track longitudinal position in a straw.
@@ -266,7 +266,7 @@
 
 \begin{frame}{Introduction: station orientation}
   
-  During CM, there was a discussion related to the orientation of the station:
+  CM tracker workshop:
   \vspace{1mm}
   \begin{itemize}
     \item Vertical orientation is preferred for gas system and because the station will be vertical during the experiment;
@@ -285,9 +285,13 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
   \begin{columns}
     \begin{column}{0.6 \framewidth}
       \begin{itemize}
-  \item The station is not yet calibrated: whether a straw has been hit or not is the only info we have;
+  \item  Starting assumptions:
+  \begin{itemize}
+    \item the station is not yet calibrated;
+    \item for reconstruction, can only use the information about the hit straws.
+  \end{itemize}
   \vspace{3mm}
-\item 4 hits per face to reconstruct one line:
+\item To reconstruct a line, need 4 hits, one per face:
         \begin{itemize}
           \item panel hits in each face $\rightarrow$ combo hits;
           \item 2 combo hits in a plane $\rightarrow$ stereo hit;
@@ -295,7 +299,7 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
         \end{itemize}
         \vspace{3mm}
 
-  \item The reconstruction of the hit position is performed using:
+  \item Reconstruction of the panel hit position uses:
   \vspace{2mm}
 
     \begin{itemize}
@@ -321,11 +325,13 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
 
 \begin{frame}{Cosmics simulation and selection criteria}
   \begin{itemize}
-    \item Simulated cosmics crossing only one station;
+    \item Use Production configs to simulate tracker in extracted position;
     \vspace{3mm}
-    \item Station in vertical orientation in extracted position;
+    \item Station in vertical orientation;
     \vspace{3mm}
     \item No magnetic field;
+    \vspace{3mm}
+    \item  require hits in the first station, ignore other stations;
     \vspace{3mm}
     \item To reconstruct a straight line in 3D, at least 4 hits at different $z$ are needed: tracks selected with $nhits_{face_i}\geq 1$;
     \vspace{3mm}
@@ -343,9 +349,9 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
                 \label{fig:enter-label}
             \end{figure}
 \begin{itemize}
-  \item spotty and non uniform illumination pattern of a panel in a vertical orientation (panel frame);
-    \item same for all panels;
-  \item wires have no hits in the center.
+  \item spotty and non uniform illumination pattern;
+    \item similar patterns for all panels;
+  \item almost no hits in the central region.
 \end{itemize}
 
 \end{frame}
@@ -375,9 +381,11 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
       \begin{itemize}
         \item the histogram shows longitudinal position in the panel frame;
         \vspace{3mm}
-      \item reconstructed longitudinal position distribution presents peaks in the overlaps with other panels;
+      \item bumps are a consequence
+      of the four hit faces requirement;
         \vspace{3mm}
-      \item different straws make different peaks.
+      \item different bumps
+      correspond to different straws.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -406,15 +414,13 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
     \begin{column}{0.5\framewidth}
       \begin{itemize}
        
-      \item reconstructed longitudinal position distribution presents peaks in the overlaps with other panels;
-        \vspace{3mm}
       \item $\Delta x = x_{rec}-x_{true}$;
       \vspace{3mm}
         \item the longitudinal position bias range is about -6$\div$6 cm;
         \vspace{3mm}
-        \item 2D distribution of $\Delta x$ versus $x_{true}$ shows four different spots referring to the overlap regions;
+        \item 2D distribution of $\Delta x$ versus $x_{true}$ shows eight different spots corresponding to the overlap regions;
         \vspace{3mm}
-        \item the first spot (CAL side) is referred to ninety degrees panels overlap.
+        \item the first two spots (CAL side) corresponds to ninety degrees panels overlap.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -437,7 +443,7 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
         \vspace{3mm}
         \item the first part (CAL side) is referred to ninety degrees panels overlap;
         \vspace{3mm}
-        \item the mean is not a good estimator of the bias, because the distribution is referred to multiple straws.
+        \item the mean is not a good estimator - see previous slide.
       \end{itemize}
 
   
@@ -482,11 +488,14 @@ A simulation has been performed to reconstruct cosmics tracks with vertically or
   In a vertical configuration of the station:
   \vspace{6mm}
   \begin{itemize}
-    \item illumination of panels is very non uniform, no hits in the central part of wires;
+    \item illumination of panels is very non uniform, no hits in the central part of panels;
     \vspace{4mm}
-    \item there will be systematic effects in determining the longitudinal position ($\sim$ cm) due to the panel orientation;
+    \item systematic effects ($\sim$ cm) in determining the longitudinal
+    positionn;
     \vspace{4mm}
-    \item calibration is expected to be very difficult in these conditions.
+    \item systematics depends on the panel orientation;
+    \vspace{4mm}
+    \item expect calibration to become a challenge.
   \end{itemize}
 \end{frame}
 
