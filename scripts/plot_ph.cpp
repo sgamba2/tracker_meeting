@@ -29,41 +29,41 @@ void plot_panel_bias_vs_x_prof_all(){
  TProfile* p0=h0->ProfileX();
  p0->Draw("");
  p0->GetXaxis()->SetTitle("long. pos. [mm]");
- p0->SetTitle("Run 1210, plane0, panel0: profile #Deltax vs x");
+ p0->SetTitle("plane0, panel0: profile #Deltax vs x");
  p0->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  c1->cd(2);
  TProfile* p1=h1->ProfileX();
  p1->GetXaxis()->SetTitle("long. pos. [mm]");
- p1->SetTitle("Run 1210, plane0, panel1: profile #Deltax vs x");
+ p1->SetTitle("plane0, panel1: profile #Deltax vs x");
  p1->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p1->Draw("");
  c1->cd(3);
  TProfile* p2=h2->ProfileX();
  p2->GetXaxis()->SetTitle("long. pos. [mm]");
- p2->SetTitle("Run 1210, plane0, panel2: profile #Deltax vs x");
+ p2->SetTitle("plane0, panel2: profile #Deltax vs x");
  p2->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p2->Draw("");
  c1->cd(4);
  TProfile* p3=h3->ProfileX();
  p3->GetXaxis()->SetTitle("long. pos. [mm]");
- p3->SetTitle("Run 1210, plane0, panel3: profile #Deltax vs x");
+ p3->SetTitle("plane0, panel3: profile #Deltax vs x");
  p3->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p3->Draw("");
  c1->cd(5);
  TProfile* p4=h4->ProfileX();
  p4->GetXaxis()->SetTitle("long. pos. [mm]");
- p4->SetTitle("Run 1210, plane0, panel4: profile #Deltax vs x");
+ p4->SetTitle("plane0, panel4: profile #Deltax vs x");
  p4->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p4->Draw("");
  c1->cd(6);
  TProfile* p5= h5->ProfileX();
  p5->GetXaxis()->SetTitle("long. pos. [mm]");
- p5->SetTitle("Run 1210, plane0, panel5: profile #Deltax vs x");
+ p5->SetTitle("plane0, panel5: profile #Deltax vs x");
  p5->GetYaxis()->SetTitle("prof. #Deltax [mm]");
 
  p5->Draw("");
@@ -83,7 +83,7 @@ void plot_myz(){
   TProfile* p0=h0->ProfileX();
   p0->Draw("");
   p0->GetXaxis()->SetTitle("m_{yz,true}");
-  p0->SetTitle("Run 1210: profile m_{yz,rec} vs m_{yz,true}");
+  p0->SetTitle("profile m_{yz,rec} vs m_{yz,true}");
   p0->GetYaxis()->SetTitle("m_{yz,rec}");
 
   p0->Draw("");
@@ -102,7 +102,7 @@ void plot_mxy(){
   TProfile* p0=h0->ProfileX();
   p0->Draw("");
   p0->GetXaxis()->SetTitle("m_{yx,true}");
-  p0->SetTitle("Run 1210: profile m_{yx,rec} vs m_{yx,true}");
+  p0->SetTitle("profile m_{yx,rec} vs m_{yx,true}");
   p0->GetYaxis()->SetTitle("m_{yx,rec}");
 
   p0->Draw("");
@@ -125,7 +125,7 @@ void plot_panel_0(){
 
  h0->GetXaxis()->SetRangeUser(700.,-700.);
  h0->GetXaxis()->SetTitle("x_{panel} [mm]");
- h0->SetTitle("Run 1210, plane0, panel0: x vs y, panel frame");
+ h0->SetTitle("plane0, panel0: x vs y, panel frame");
  h0->GetYaxis()->SetTitle("y_{panel} [mm]");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/xp_vs_yp_panel0.pdf");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/xp_vs_yp_panel0.png");
@@ -144,7 +144,7 @@ void plot_panel_bias_vs_x_prof_0(){
  c2->cd(1);
  h0->Draw("");
  h0->GetXaxis()->SetTitle("long. pos. [mm]");
- h0->SetTitle("Run 1210, plane0, panel0: #Deltax vs x_{true}");
+ h0->SetTitle("plane0, panel0: #Deltax vs x_{true}");
  h0->GetYaxis()->SetTitle("#Deltax [mm]");
  h0->SetMarkerStyle(7);
 
@@ -158,7 +158,7 @@ void plot_panel_bias_vs_x_prof_0(){
  TProfile* p0=h0->ProfileX();
  p0->Draw("");
  p0->GetXaxis()->SetTitle("long. pos. [mm]");
- p0->SetTitle("Run 1210, plane0, panel0: profile #Deltax vs x");
+ p0->SetTitle("plane0, panel0: profile #Deltax vs x");
  p0->GetYaxis()->SetTitle("prof. #Deltax [mm]");
  p0->SetMarkerStyle(1);
 
@@ -184,7 +184,7 @@ void plot_x_bias(){
  h0->SetBarOffset(0.5);
  h0->GetXaxis()->SetRangeUser(-200.,200.);
  h0->GetXaxis()->SetTitle("x_{panel} [mm]");
- h0->SetTitle("Run 1210, plane0, panel0: #Deltax, panel frame");
+ h0->SetTitle("plane0, panel0: #Deltax, panel frame");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias.pdf");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/panel_00_x_bias.png");
@@ -207,7 +207,7 @@ void plot_myz_all(){
  h0->SetBarWidth(0.84);
  h0->SetBarOffset(0.5);
  h0->GetXaxis()->SetTitle("m_{yz,true}");
- h0->SetTitle("Run 1210: m_{yz,true} distribution");
+ h0->SetTitle("m_{yz,true} distribution");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz.pdf");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz.png");
@@ -222,7 +222,7 @@ void plot_myz_all(){
  h1->SetBarWidth(0.84);
  h1->SetBarOffset(0.5);
  h1->GetXaxis()->SetTitle("m_{yz,rec}");
- h1->SetTitle("Run 1210: m_{yz,rec} distribution");
+ h1->SetTitle("m_{yz,rec} distribution");
  h1->GetYaxis()->SetTitle("counts");
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_rec.pdf");
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_rec.png");
@@ -237,7 +237,7 @@ void plot_myz_all(){
  h2->SetBarWidth(0.84);
  h2->SetBarOffset(0.5);
  h2->GetXaxis()->SetTitle("m_{yz,true}");
- h2->SetTitle("Run 1210: m_{yz,rec} vs m_{yz,true}");
+ h2->SetTitle("m_{yz,rec} vs m_{yz,true}");
  h2->GetYaxis()->SetTitle("m_{yz,rec}");
  c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec.pdf");
  c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myz_vs_myz_rec.png");
@@ -260,7 +260,7 @@ void plot_mxy_all(){
  h0->SetBarWidth(0.84);
  h0->SetBarOffset(0.5);
  h0->GetXaxis()->SetTitle("m_{yx,true}");
- h0->SetTitle("Run 1210: m_{yx,true} distribution");
+ h0->SetTitle("m_{yx,true} distribution");
  h0->GetYaxis()->SetTitle("counts");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy.pdf");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy.png");
@@ -275,7 +275,7 @@ void plot_mxy_all(){
  h1->SetBarWidth(0.84);
  h1->SetBarOffset(0.5);
  h1->GetXaxis()->SetTitle("m_{yx,rec}");
- h1->SetTitle("Run 1210: m_{yx,rec} distribution");
+ h1->SetTitle("m_{yx,rec} distribution");
  h1->GetYaxis()->SetTitle("counts");
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy_rec.pdf");
  c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/mxy_rec.png");
@@ -290,7 +290,7 @@ void plot_mxy_all(){
  h2->SetBarWidth(0.84);
  h2->SetBarOffset(0.5);
  h2->GetXaxis()->SetTitle("m_{yx,true}");
- h2->SetTitle("Run 1210: m_{yx,rec} vs m_{yx,true}");
+ h2->SetTitle("m_{yx,rec} vs m_{yx,true}");
  h2->GetYaxis()->SetTitle("m_{yx,rec}");
  c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/myx_vs_myx_rec.pdf");
 
@@ -318,7 +318,7 @@ void plot_x(){
  h0->GetXaxis()->SetTitle("x_{panel} [mm]");
  h0->GetYaxis()->SetTitle("counts");
 
- h0->SetTitle("Run 1210, plane0, panel0: x, panel frame");
+ h0->SetTitle("plane0, panel0: x, panel frame");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/x_panel0.pdf");
  c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/x_panel0.png");
 
