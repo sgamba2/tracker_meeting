@@ -324,6 +324,118 @@ void plot_x(){
 
  //h2->Draw("sames");
 }
+void plot_panel_ill(){
+
+ TFile *f=TFile::Open("prova.hist");
+
+ TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_00/panel_00_xp_vs_yp");
+ TH2F * h1 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_01/panel_01_xp_vs_yp");
+ TH2F * h2 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_02/panel_02_xp_vs_yp");
+ TH2F * h3 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_03/panel_03_xp_vs_yp");
+ TH2F * h4 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_04/panel_04_xp_vs_yp");
+ TH2F * h5 = (TH2F*)f->Get("TCalStat/trk/plane_0/panel_05/panel_05_xp_vs_yp");
+
+ TCanvas * c1 = new TCanvas("c1","c1");
+ h0->Draw("");
+ h0->SetTitle("plane0, panel0: x vs y, panel frame");
+ h0->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h0->GetYaxis()->SetTitle("y_{panel} [mm]");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_panel0_x_vs_y_all.pdf");
+
+ TCanvas * c2 = new TCanvas("c2","c2");
+ h1->SetTitle("plane0, panel1: x vs y, panel frame");
+ h1->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h1->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h1->Draw("");
+ c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_panel1_x_vs_y_all.pdf");
+
+ TCanvas * c3 = new TCanvas("c3","c3");
+ h2->SetTitle("plane0, panel2: x vs y, panel frame");
+ h2->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h2->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h2->Draw("");
+ c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_panel2_x_vs_y_all.pdf");
+
+ TCanvas * c4= new TCanvas("c4","c4");
+ h3->SetTitle("plane0, panel3: x vs y, panel frame");
+ h3->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h3->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h3->Draw("");
+ c4->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_panel3_x_vs_y_all.pdf");
+
+ TCanvas * c5= new TCanvas("c5","c5");
+ h4->SetTitle("plane0, panel4: x vs y, panel frame");
+ h4->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h4->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h4->Draw("");
+ c5->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_panel4_x_vs_y_all.pdf");
+
+ TCanvas * c6= new TCanvas("c6","c6");
+ h5->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h5->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h5->SetTitle("plane0, panel5: x vs y, panel frame");
+ h5->Draw("");
+ c6->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane0_panel5_x_vs_y_all.pdf");
+
+ //h2->Draw("sames");
+}
+
+
+void plot_panel_ill_1(){
+
+ TFile *f=TFile::Open("prova.hist");
+
+ TH2F * h0 = (TH2F*)f->Get("TCalStat/trk/plane_1/panel_00/panel_00_xp_vs_yp");
+ TH2F * h1 = (TH2F*)f->Get("TCalStat/trk/plane_1/panel_01/panel_01_xp_vs_yp");
+ TH2F * h2 = (TH2F*)f->Get("TCalStat/trk/plane_1/panel_02/panel_02_xp_vs_yp");
+ TH2F * h3 = (TH2F*)f->Get("TCalStat/trk/plane_1/panel_03/panel_03_xp_vs_yp");
+ TH2F * h4 = (TH2F*)f->Get("TCalStat/trk/plane_1/panel_04/panel_04_xp_vs_yp");
+ TH2F * h5 = (TH2F*)f->Get("TCalStat/trk/plane_1/panel_05/panel_05_xp_vs_yp");
+
+ TCanvas * c1 = new TCanvas("c1","c1");
+ h0->Draw("");
+ h0->SetTitle("plane1, panel0: x vs y, panel frame");
+ h0->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h0->GetYaxis()->SetTitle("y_{panel} [mm]");
+ c1->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane1_panel0_x_vs_y_all.pdf");
+
+ TCanvas * c2 = new TCanvas("c2","c2");
+ h1->SetTitle("plane1, panel1: x vs y, panel frame");
+ h1->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h1->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h1->Draw("");
+ c2->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane1_panel1_x_vs_y_all.pdf");
+
+ TCanvas * c3 = new TCanvas("c3","c3");
+ h2->SetTitle("plane1, panel2: x vs y, panel frame");
+ h2->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h2->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h2->Draw("");
+ c3->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane1_panel2_x_vs_y_all.pdf");
+
+ TCanvas * c4= new TCanvas("c4","c4");
+ h3->SetTitle("plane1, panel3: x vs y, panel frame");
+ h3->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h3->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h3->Draw("");
+ c4->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane1_panel3_x_vs_y_all.pdf");
+
+ TCanvas * c5= new TCanvas("c5","c5");
+ h4->SetTitle("plane1, panel4: x vs y, panel frame");
+ h4->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h4->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h4->Draw("");
+ c5->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane1_panel4_x_vs_y_all.pdf");
+
+ TCanvas * c6= new TCanvas("c6","c6");
+ h5->GetXaxis()->SetTitle("x_{panel} [mm]");
+ h5->GetYaxis()->SetTitle("y_{panel} [mm]");
+ h5->SetTitle("plane1, panel5: x vs y, panel frame");
+ h5->Draw("");
+ c6->SaveAs("/exp/mu2e/app/users/sgamba/r002/tracker_meeting/figures/pdf/plane1_panel5_x_vs_y_all.pdf");
+
+ //h2->Draw("sames");
+}
 
 
 void plot_all(){
@@ -336,6 +448,9 @@ void plot_all(){
   plot_panel_bias_vs_x_prof_all();
   plot_x_bias();
   plot_x();
+  plot_panel_ill();
+  plot_panel_ill_1();
+
   return;
 }
 
